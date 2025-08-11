@@ -8,7 +8,7 @@ import userRoutes from "./routes/user.route.js";
 import chatRoutes from "./routes/chat.route.js";
 
 import { connectDB } from "./lib/db.js";
-import { job } from "./lib/cron.js"
+import job  from "./lib/cron.js"
 
 const app = express();
 const PORT = process.env.PORT;
