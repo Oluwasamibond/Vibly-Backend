@@ -8,19 +8,21 @@ import userRoutes from "./routes/user.route.js";
 import chatRoutes from "./routes/chat.route.js";
 
 import { connectDB } from "./lib/db.js";
+import { job } from "./lib/cron.js"
 
 const app = express();
 const PORT = process.env.PORT;
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://vibly-frontend.vercel.app",
     credentials: true, 
   })
 );
 
 app.use(express.json());
 app.use(cookieParser());
+job.start()
 
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
