@@ -15,7 +15,7 @@ const PORT = process.env.PORT;
 
 app.use(
   cors({
-    origin: "https://vibly-frontend.vercel.app",
+    origin: "https://vibly-topaz.vercel.app",
     credentials: true, 
   })
 );
